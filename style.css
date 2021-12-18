@@ -1,0 +1,110 @@
+:root {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+body {
+  color: white;
+  background-color: darkslateblue;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background: var(--bg-primary);
+}
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+}
+.nav-item {
+  width: 100%;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.link-text {
+  display: none;
+}
+.navbar:hover {
+  width: 16rem;
+}
+.navbar:hover .link-text {
+  display: block;
+}
+.nav-link svg {
+  min-width: 2rem;
+  max-width: 10px;
+  margin: 0 1.5rem;
+}
+/* .nav-item:last-child {
+  margin-top: auto;
+} */
+
+.taskbar {
+  display: flex;
+  color: #141418;
+  background-color: #f5f5dc;
+  border-radius: 8px;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.taskbar-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-flow: wrap;
+}
+.taskbar-title {
+  font-weight: Bold;
+}
+.taskbar-checkbox {
+  height: 100%;
+}
+.taskbar-due {
+  font-weight: bold;
+}
+.taskbar-notes {
+  flex-basis: 100%;
+}
+
+.taskbar-edit {
+  margin-left: auto;
+}
+.break {
+  width: 100%;
+}
