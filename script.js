@@ -1,5 +1,6 @@
 let projects = [];
 let ulDom = document.querySelector(".navbar-nav");
+let taskDom = document.querySelector(".tasklist");
 let addButtonDom = document.getElementById("addButton");
 
 class Project {
@@ -56,5 +57,21 @@ function renderLi() {
 }
 
 function render(i) {
-
+  taskDom.innerHTML = "";
+  let template = `
+  <div class="taskbar-checkbox">
+  <input type="checkbox" />
+  </div>
+  <div class="taskbar-wrapper">
+  <div class="taskbar-title">${projects[i].title}, </div>
+  <div class="taskbar-due">${projects[i].dueDate}</div>
+  <div class="taskbar-notes">
+  ${projects[i].description}
+  </div>
+  </div>
+  <div class="taskbar-edit">X</div>`;
+  let div = document.createElement("div");
+  div.innerHTML = template;
+  div.classList.add("taskbar");
+  taskDom.appendChild(div);
 }
